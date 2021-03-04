@@ -36,6 +36,6 @@ class LoginController extends Controller
         // dd('ok');
 
          // redirect
-         return redirect()->route('post');
+         return redirect()->route('admin');
     }
 }

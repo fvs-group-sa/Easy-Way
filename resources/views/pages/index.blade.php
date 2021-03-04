@@ -26,7 +26,7 @@
                     <ul class="nav__list">
                         <li class="nav__item"><a href="{{ route('home') }}" class="nav__link active">Home</a></li>
                         <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
-                        <li class="nav__item"><a href="{{ route('services') }}" class="nav__link">Our Services</a></li>
+                        <li class="nav__item"><a href="#services" class="nav__link">Our Services</a></li>
                         <li class="nav__item"><a href="#ourclients" class="nav__link">Our Clients</a></li>
                         <li class="nav__item"><a href="/post" class="nav__link">Blogs</a></li>
                         <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
@@ -150,7 +150,7 @@
       <!-- <h1>My Services</h1> -->
       
     
-    <a href="/services" class="nav__link">
+    <a href="{{ route('services') }}" class="nav__link">
     <div class="services-center container">
       <div class="service" data-aos="fade-down" data-aos-duration="2000">
         <span><i class="fab fa-accusoft"></i></span>
@@ -164,7 +164,7 @@
 
 
 
-      <a href="services.html" class="nav__link">
+      <a href="{{ route('services') }}" class="nav__link">
       <div class="service" data-aos="fade-up" data-aos-duration="2000">
         <span><i class="fas fa-chart-line"></i></span>
         <h2>Delivery</h2>
@@ -175,7 +175,7 @@
       </a>
 
 
-      <a href="services.html" class="nav__link"> 
+      <a href="{{ route('services') }}" class="nav__link"> 
       <div class="service" data-aos="fade-down" data-aos-duration="2000">
         <span><i class="fas fa-blender-phone"></i></span>
         <h2>Delivery</h2>
@@ -186,7 +186,7 @@
       </a>
 
 
-      <a href="services.html" class="nav__link">
+      <a href="{{ route('services') }}" class="nav__link">
       <div class="service" data-aos="fade-down" data-aos-duration="2000">
         <span><i class="fas fa-blender-phone"></i></span>
         <h2>Delivery</h2>

@@ -13,6 +13,6 @@ class LogoutController extends Controller
 
         // dd('logout');
 
-        return redirect()->route('admin');
+        return redirect()->route('login');
     }
 }
