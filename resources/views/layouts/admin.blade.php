@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <title>Easy Way Dashboard</title>
 </head>
-<body class="bg-gray-200">
+<body class="p-0">
+    
     @yield('content')
 
 </body>

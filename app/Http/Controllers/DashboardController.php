@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Post;
 use Illuminate\Http\Request;
 
 class DashboardController extends Controller
@@ -13,7 +14,11 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        return view('admin.dashboard');
+        $posts = Post::latest()->paginate(10);
+
+        return view('admin.dashboard',[
+            'posts'=>$posts
+        ]);
     }
 
     /**
@@ -34,19 +39,28 @@ class DashboardController extends Controller
      */
     public function store(Request $request)
     {
-        //
+         
+        $this->validate($request, [
+            'body' => 'required',
+            'title' => 'required'
+        ]);
+
+        // $request->user()->   you can use this to grab the current authenticated user as well
+        
+        // you can use this if you want to
+        $posts = new Post([
+            //Larvel will automatically fill in user_id
+            'body'=>$request->body,
+            'title'=>$request->title,
+            'image'=>$request->image
+        ]);
+
+        $posts->save();
+
+        return view('admin.dashboard');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
+
 
     /**
      * Show the form for editing the specified resource.
@@ -59,17 +73,7 @@ class DashboardController extends Controller
         //
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
+  
 
     /**
      * Remove the specified resource from storage.
@@ -79,6 +83,6 @@ class DashboardController extends Controller
      */
     public function destroy($id)
     {
-        //
+
     }
 }

@@ -26,8 +26,10 @@ Route::get('/services', function () {
     return view('pages/services');
 })->name('services');
 
-Route::get('/post', [PostController::class, 'index'])
-    ->name('post');
+Route::get('/post', [PostController::class, 'index'])->name('post');
+Route::get('/newpost', [PostController::class, 'newPostIndex'])->name('post.new');
+Route::post('/post', [PostController::class, 'store']);
+Route::delete('/post/{post}', [PostController::class, 'destroy'])->name('post.destroy');
 
 
 Route::get('/admin', [DashboardController::class, 'index'])

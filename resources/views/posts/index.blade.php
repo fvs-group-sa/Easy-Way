@@ -18,44 +18,52 @@
 @section('content')
 <div class="flex justify-center">
     <div class="w-8/12 bg-white p-6 rounded-lg">
-        <form action="{{route('post') }}" method="post" class="mb-4">
-            @csrf
-            <div class="mb-4">
-                <label for="body" class="sr-only">Body</label>
-                <textarea name="body" id="body" cols="30" rows="4" class="bg-gray-100
-                border-2 w-full p-4 rounded-lg @error('body') border-red-500 @enderror"
-                placeholder="Post something!"></textarea>
+        
 
-                @error('body')
-                    <div class="text-red-500 mt-2 text-sm">
-                        {{$message}}
+
+       {{-- Begining of main content --}}
+       <main class="flex-1 overflow-x-hidden overflow-y-auto">
+        <div class="container mx-auto px-6 py-8">
+            <div class="flex flex-wrap px-6">
+
+              {{-- Begining of Post 1 --}}
+              @if ($posts->count())
+                @foreach($posts as $post)
+                  <div class="w-full lg:w-1/2   md:px-4 lg:px-6 py-5">
+                    <div class="bg-white hover:shadow-xl">  
+                      <div class="">
+                          <img src="https://images.pexels.com/photos/956999/milky-way-starry-sky-night-sky-star-956999.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="" class="h-56 w-full border-white border-8">
+                      </div>
+                      
+                      <div class="px-4 py-4 md:px-10">
+                        <h1 class="font-bold text-lg">
+                            {{$post->title}}
+                        </h1>
+                        <p class="py-4">
+                          {{$post->body}}
+                        </p>
+                        
+                        <div class="flex flex-wrap pt-8">
+                            <div class="w-full md:w-1/3 text-sm font-medium">
+                              {{$post->created_at->diffForHumans()}}
+                            </div>
+
+                            <div class="2/3">
+                                <div class="text-sm font-medium">
+                                    <a href="" class="text-blue-700 px-1 ">تعديل</a>
+                                    <a href="" class="text-blue-500 px-1 ">مسح</a>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
                     </div>
-                @enderror    
-            </div>
-
-            <div>
-                <button class="bg-blue-500 text-white px-4 py-2 rounded font-medium">Post</button>
-            </div>
-        </form>
-
-
-        @if ($posts->count())
-            @foreach($posts as $post)
-
-            <div class="mb-4">
-                <a href="" class="font-bold">{{$post->title}}</a>
-                <span class="text-gray-600 text-sm">{{$post->created_at->diffForHumans()}}</span>
-            
-                <p class="mb-2">{{$post->body}}</p>
-
-            
-
-                
-            </div>
-            @endforeach
-        @else
-            There is no post
-        @endif
+                  </div>
+                @endforeach
+                {{-- End of Post 1 --}}
+              @else
+                  There is no post
+                  
+                @endif
     </div>
 </div>
 @endsection

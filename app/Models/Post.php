@@ -15,4 +15,10 @@ class Post extends Model
         'body',
         'image',
     ];
+
+
+    public function posts()
+    {
+        return $this->hasMany(Post::class);
+    }
 }
