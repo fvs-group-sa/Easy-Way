@@ -25,8 +25,13 @@
                   <nav class="flex flex-col mt-10 px-4 text-center">
                       <a href="#" class="py-2 text-sm text-gray-700 dark:text-gray-100 bg-gray-200 dark:bg-gray-800 rounded">الــمــدونة</a>
                       <a href="#" class="mt-3 py-2 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-100 hover:bg-gray-200 dark:hover:bg-gray-800 rounded">الإعــدادات</a>
-                      <a href="#" class="mt-3 py-2 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-100 hover:bg-gray-200 dark:hover:bg-gray-800 rounded">خـــروج</a>
-                  </nav>
+                      
+                      
+                      <form action="{{ route('logout') }}" method="post" class="mt-3 py-2 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-100 hover:bg-gray-200 dark:hover:bg-gray-800 rounded">
+                        @csrf
+                        <a type="submit" class="">خـــروج</a>
+                      </form>
+                    </nav>
                 </div>
             
                 <div class="flex-1 flex flex-col overflow-hidden">
@@ -50,7 +55,7 @@
                         @yield('content')
 
                     </div>
-                </main>
+                  </main>
 
                     </div>
                 </div>
