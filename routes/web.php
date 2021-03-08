@@ -31,16 +31,12 @@ Route::get('/settings', function () {
     return view('admin/settings');
 })->name('settings')->middleware('auth');
 
-// Route::get('/editpost', function () {
-//     return view('admin/editpost');
-// })->name('editpost');
-
-Route::get('/post', [PostsController::class, 'index'])->name('post');
-Route::get('/newpost', [PostsController::class, 'newPostIndex'])->name('post.new');
-Route::post('/Addpost', [PostsController::class, 'store'])->name('addpost');
-Route::get('/editpost/{post}', [PostsController::class, 'editPost'])->name('editpost');
-Route::post('/updatepost/{post}', [PostsController::class, 'update'])->name('updatepost');
-Route::delete('/post/{post}', [PostsController::class, 'destroy'])->name('post.destroy');
+Route::get('/post', [PostsController::class, 'index'])->name('post')->middleware('auth');
+Route::get('/newpost', [PostsController::class, 'newPostIndex'])->name('post.new')->middleware('auth');
+Route::post('/Addpost', [PostsController::class, 'store'])->name('addpost')->middleware('auth');
+Route::get('/editpost/{post}', [PostsController::class, 'editPost'])->name('editpost')->middleware('auth');
+Route::post('/updatepost/{post}', [PostsController::class, 'update'])->name('updatepost')->middleware('auth');
+Route::delete('/post/{post}', [PostsController::class, 'destroy'])->name('post.destroy')->middleware('auth');
 
 Route::get('/admin', [PostsController::class, 'index'])
     ->name('admin')
@@ -50,13 +46,13 @@ Route::get('/settings', [SettingsController::class, 'index'])
     ->name('settings')
     ->middleware('auth');
 
-Route::post('/logout', [LogoutController::class, 'store'])->name('logout');
+Route::post('/logout', [LogoutController::class, 'store'])->name('logout')->middleware('auth');
 
 Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::post('/login', [LoginController::class, 'store']);
 
-Route::get('/register', [RegisterController::class, 'index'])->name('register');
-Route::post('/register', [RegisterController::class, 'store']);
+// Route::get('/register', [RegisterController::class, 'index'])->name('register');
+// Route::post('/register', [RegisterController::class, 'store']);
 
 
 Route::get('/blog', [BlogController::class, 'index'])->name('blog');

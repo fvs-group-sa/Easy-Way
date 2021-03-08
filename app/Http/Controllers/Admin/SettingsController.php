@@ -9,6 +9,12 @@ class SettingsController extends Controller
 {
     public function index()
     {
+        // $posts = Post::latest()->paginate(10);
+
+        // return view('admin.posts',[
+        //     'posts'=>$posts
+        // ]);
+
         return view('admin.settings');
     }
 }
