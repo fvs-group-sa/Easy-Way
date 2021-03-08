@@ -2,13 +2,15 @@
 
 @section('content')
 <div class="p-10 xs:p-0 mx-auto md:w-full md:max-w-md">
-    <h1 class="font-bold text-center text-2xl mb-5">منــــــشـــــور جديــــــد</h1>
-    <form action="{{route('addpost') }}" method="post"  enctype="multipart/form-data" class="bg-white shadow w-full rounded-lg divide-y divide-gray-200">
+    @if ($posts->count())
+    @foreach($posts as $post)
+    <h1 class="font-bold text-center text-2xl mb-5">تــــعـــديل منــــــشـــــور</h1>
+    <form action="{{route('updatepost', $post) }}" method="post" class="bg-white shadow w-full rounded-lg divide-y divide-gray-200">
         @csrf
         <div class="mb-4">
             <div class="">
                 <label for="title" class="font-semibold text-sm text-gray-600 pb-1 block">Title</label>
-                <input type="text" name="title" id="title"
+                <input type="text" name="title" id="title" value="{{$post->title}}"
                 class="border rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full
                 @error('title') border-red-500 @enderror" value="">
             
@@ -21,7 +23,7 @@
 
             <div class="">
                 <label for="image" class="font-semibold text-sm text-gray-600 pb-1 block">Image</label>
-                <input type="file" name="image" id="image"
+                <input type="text" name="image" id="image"  value="{{$post->image}}"
                 class="border rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full
                 @error('image') border-red-500 @enderror" value="">
             
@@ -34,8 +36,7 @@
 
             <label for="body" class="sr-only">Body</label>
             <textarea name="body" id="body" cols="30" rows="4" class="bg-gray-100
-            border-2 w-full p-4 rounded-lg @error('body') border-red-500 @enderror"
-            placeholder="Post something!"></textarea>
+            border-2 w-full p-4 rounded-lg @error('body') border-red-500 @enderror">{{$post->body}}</textarea>
 
             @error('body')
                 <div class="text-red-500 mt-2 text-sm">
@@ -51,5 +52,14 @@
             </svg>
         </button>
     </form>
+    @endforeach
+                    {{-- End of Post 1 --}}
+                  @else
+                  <div class="container mx-auto px-6 py-8">
+                    <div class="flex flex-wrap px-6">
+                      Something is wong over hereeee
+                    </div>
+                  </div>
+                  @endif
 </div>
 @endsection

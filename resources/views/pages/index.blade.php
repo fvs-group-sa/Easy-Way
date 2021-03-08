@@ -18,7 +18,7 @@
                 
                 <div class="logo">
                     <!-- <h1>EasyWay<span>Transport</span></h1> -->
-                    <a href="/">
+                    <a href="{{ route('home') }}">
                     <img src="{{ url('image/easy2-removebg-preview.png') }}" alt="">
                    </div>
         
@@ -28,7 +28,7 @@
                         <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
                         <li class="nav__item"><a href="#services" class="nav__link">Our Services</a></li>
                         <li class="nav__item"><a href="#ourclients" class="nav__link">Our Clients</a></li>
-                        <li class="nav__item"><a href="/post" class="nav__link">Blogs</a></li>
+                        <li class="nav__item"><a href="{{route('blog')}}" class="nav__link">Blogs</a></li>
                         <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
                     </ul>
                 </div>
@@ -39,10 +39,9 @@
             </nav>
             
         </header>
-       
-        
 
         <main class="l-main">
+      
            <!--===== HOME =====-->
             <section class="home bd-grid" id="home">
                 <div class="home__data">
@@ -239,6 +238,7 @@
                     </form>
                 </div>
             </section>
+        
         </main>
 
         <!--===== FOOTER =====-->

@@ -4,7 +4,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Admin\PostsController;
 use App\Http\Controllers\Auth\LogoutController;
+use App\Http\Controllers\Client\BlogController;
 use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\Admin\SettingsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,16 +31,22 @@ Route::get('/settings', function () {
     return view('admin/settings');
 })->name('settings')->middleware('auth');
 
+// Route::get('/editpost', function () {
+//     return view('admin/editpost');
+// })->name('editpost');
+
 Route::get('/post', [PostsController::class, 'index'])->name('post');
 Route::get('/newpost', [PostsController::class, 'newPostIndex'])->name('post.new');
-Route::post('/post', [PostsController::class, 'store']);
+Route::post('/Addpost', [PostsController::class, 'store'])->name('addpost');
+Route::get('/editpost/{post}', [PostsController::class, 'editPost'])->name('editpost');
+Route::post('/updatepost/{post}', [PostsController::class, 'update'])->name('updatepost');
 Route::delete('/post/{post}', [PostsController::class, 'destroy'])->name('post.destroy');
 
 Route::get('/admin', [PostsController::class, 'index'])
     ->name('admin')
     ->middleware('auth');
 
-Route::get('/settings', [PostsController::class, 'index'])
+Route::get('/settings', [SettingsController::class, 'index'])
     ->name('settings')
     ->middleware('auth');
 
@@ -49,3 +57,6 @@ Route::post('/login', [LoginController::class, 'store']);
 
 Route::get('/register', [RegisterController::class, 'index'])->name('register');
 Route::post('/register', [RegisterController::class, 'store']);
+
+
+Route::get('/blog', [BlogController::class, 'index'])->name('blog');

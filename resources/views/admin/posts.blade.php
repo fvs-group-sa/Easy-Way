@@ -18,7 +18,7 @@
                       <div class="w-full lg:w-1/2   md:px-4 lg:px-6 py-5">
                         <div class="bg-white hover:shadow-xl">  
                           <div class="">
-                              <img src="https://images.pexels.com/photos/956999/milky-way-starry-sky-night-sky-star-956999.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="" class="h-56 w-full border-white border-8">
+                              <img src="{{asset('public/image/'.$post->image)}}" alt="" class="w-full border-white border-8">
                           </div>
                           
                           <div class="px-4 py-4 md:px-10">
@@ -36,7 +36,7 @@
     
                                 <div class="2/3">
                                     <div class="text-sm font-medium">
-                                        <a href="" class="text-blue-700 px-1 ">تعديل</a>
+                                        <a href="{{route('editpost', $post)}}" class="text-blue-700 px-1 ">تعديل</a>
 
                                         <form action="{{route('post.destroy', $post)}}" class="mr-1" method="post">
                                           @csrf

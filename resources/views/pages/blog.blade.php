@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{{-- <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
@@ -11,48 +11,35 @@
 
         <title>EasyWay</title>
     </head>
-    <body>
+    <body> --}}
         
 @extends('layouts.app')
 
 @section('content')
-<div class="flex justify-center">
-    <div class="w-8/12 bg-white p-6 rounded-lg">
-        
 
-
-       {{-- Begining of main content --}}
-       <main class="flex-1 overflow-x-hidden overflow-y-auto">
         <div class="container mx-auto px-6 py-8">
             <div class="flex flex-wrap px-6">
 
               {{-- Begining of Post 1 --}}
-              @if ($posts->count())
-                @foreach($posts as $post)
+              @if ($blogs->count())
+                @foreach($blogs as $blog)
                   <div class="w-full lg:w-1/2   md:px-4 lg:px-6 py-5">
                     <div class="bg-white hover:shadow-xl">  
                       <div class="">
-                          <img src="https://images.pexels.com/photos/956999/milky-way-starry-sky-night-sky-star-956999.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="" class="h-56 w-full border-white border-8">
+                          <img src="{{asset('public/image/'.$blog->image)}}" alt="" class="h-56 w-full border-white border-8">
                       </div>
                       
                       <div class="px-4 py-4 md:px-10">
                         <h1 class="font-bold text-lg">
-                            {{$post->title}}
+                            {{$blog->title}}
                         </h1>
                         <p class="py-4">
-                          {{$post->body}}
+                          {{$blog->body}}
                         </p>
                         
                         <div class="flex flex-wrap pt-8">
                             <div class="w-full md:w-1/3 text-sm font-medium">
-                              {{$post->created_at->diffForHumans()}}
-                            </div>
-
-                            <div class="2/3">
-                                <div class="text-sm font-medium">
-                                    <a href="" class="text-blue-700 px-1 ">تعديل</a>
-                                    <a href="" class="text-blue-500 px-1 ">مسح</a>
-                                </div>
+                              {{$blog->created_at->diffForHumans()}}
                             </div>
                         </div>
                       </div>
@@ -67,7 +54,6 @@
     </div>
 </div>
 @endsection
-
         {{-- <!--===== HEADER =====-->
         <header class="l-header">
             <nav class="nav bd-grid">
@@ -138,5 +124,5 @@
         <script src="js/app.js"></script> --}}
 
         
-    </body>
-</html>
+    {{-- </body> --}}
+{{-- </html>  --}}

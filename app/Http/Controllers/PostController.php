@@ -22,21 +22,6 @@ class PostController extends Controller
     }
 
 
-    public function newPostIndex()
-    {
+   
 
-        return view('admin.newPost');
-    }
-
-
-    public function store(Request $request)
-    {
-       
-    }
-
-    public function destroy(Post $post)
-    {
-         $post->delete();
-        return back();
-    }
 }
