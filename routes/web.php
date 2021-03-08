@@ -1,9 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\PostController;
-use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\Admin\PostsController;
 use App\Http\Controllers\Auth\LogoutController;
 use App\Http\Controllers\Auth\RegisterController;
 
@@ -26,22 +25,27 @@ Route::get('/services', function () {
     return view('pages/services');
 })->name('services');
 
-Route::get('/post', [PostController::class, 'index'])->name('post');
-Route::get('/newpost', [PostController::class, 'newPostIndex'])->name('post.new');
-Route::post('/post', [PostController::class, 'store']);
-Route::delete('/post/{post}', [PostController::class, 'destroy'])->name('post.destroy');
+Route::get('/settings', function () {
+    return view('admin/settings');
+})->name('settings')->middleware('auth');
 
+Route::get('/post', [PostsController::class, 'index'])->name('post');
+Route::get('/newpost', [PostsController::class, 'newPostIndex'])->name('post.new');
+Route::post('/post', [PostsController::class, 'store']);
+Route::delete('/post/{post}', [PostsController::class, 'destroy'])->name('post.destroy');
 
-Route::get('/admin', [DashboardController::class, 'index'])
+Route::get('/admin', [PostsController::class, 'index'])
     ->name('admin')
+    ->middleware('auth');
+
+Route::get('/settings', [PostsController::class, 'index'])
+    ->name('settings')
     ->middleware('auth');
 
 Route::post('/logout', [LogoutController::class, 'store'])->name('logout');
 
-
 Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::post('/login', [LoginController::class, 'store']);
-
 
 Route::get('/register', [RegisterController::class, 'index'])->name('register');
 Route::post('/register', [RegisterController::class, 'store']);

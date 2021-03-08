@@ -2,7 +2,9 @@
 
 @section('content')
 
-
+<div class="mt-6 p-6">
+    <h1 class="text-2xl font-medium text-gray-800 dark:text-white">الــمــدونة</h1>
+  </div>
         {{-- Begining of main content --}}
         
               <div class="mt-6">
@@ -50,7 +52,11 @@
                     @endforeach
                     {{-- End of Post 1 --}}
                   @else
-                      There is no post
+                  <div class="container mx-auto px-6 py-8">
+                    <div class="flex flex-wrap px-6">
+                      لا توجد منشورات
+                    </div>
+                  </div>
                   @endif
 
                   

@@ -23,13 +23,13 @@
                   </div>
             
                   <nav class="flex flex-col mt-10 px-4 text-center">
-                      <a href="#" class="py-2 text-sm text-gray-700 dark:text-gray-100 bg-gray-200 dark:bg-gray-800 rounded">الــمــدونة</a>
-                      <a href="#" class="mt-3 py-2 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-100 hover:bg-gray-200 dark:hover:bg-gray-800 rounded">الإعــدادات</a>
+                      <a href="{{route('admin')}}" class="py-2 text-sm text-gray-700 dark:text-gray-100 bg-gray-200 dark:bg-gray-800 rounded">الــمــدونة</a>
+                      <a href="{{route('settings')}}" class="mt-3 py-2 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-100 hover:bg-gray-200 dark:hover:bg-gray-800 rounded">الإعــدادات</a>
                       
                       
                       <form action="{{ route('logout') }}" method="post" class="mt-3 py-2 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-100 hover:bg-gray-200 dark:hover:bg-gray-800 rounded">
                         @csrf
-                        <a type="submit" class="">خـــروج</a>
+                        <button type="submit" class="">خـــروج</button>
                       </form>
                     </nav>
                 </div>
@@ -42,15 +42,11 @@
                           <path d="M4 6H20M4 12H20M4 18H11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
                       </button>
-                      
-                      <div class="mt-6 p-6">
-                        <h1 class="text-2xl font-medium text-gray-800 dark:text-white">الــمــدونة</h1>
-                      </div>
                     </div>  
                   </header>
 
                   <main class="flex-1 overflow-x-hidden overflow-y-auto">
-                    <div class="container mx-auto px-6 py-8">
+                    <div class="container mx-auto px-6">
     
                         @yield('content')
 
