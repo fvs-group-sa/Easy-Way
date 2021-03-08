@@ -32,10 +32,10 @@ class PostsController extends Controller
             'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
 
-        $destination_path = 'public/images/products';
+        $destination_path = 'image';
         $image = $request->file('image');
         $imageName = time().'.'.$request->image->extension();
-        $path = $request->file('image')->storeAs($destination_path, $imageName);
+        $path = $request->file('image')->move($destination_path, $imageName);
           
         // $request->user()->   you can use this to grab the current authenticated user as well
         

@@ -18,7 +18,7 @@
                       <div class="w-full lg:w-1/2   md:px-4 lg:px-6 py-5">
                         <div class="bg-white hover:shadow-xl">  
                           <div class="">
-                              <img src="{{asset('public/image/'.$post->image)}}" alt="" class="w-full border-white border-8">
+                              <img src="{{asset('image/'.$post->image)}}" alt="" class="w-full border-white border-8">
                           </div>
                           
                           <div class="px-4 py-4 md:px-10">
