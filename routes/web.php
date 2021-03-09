@@ -67,11 +67,11 @@ Route::post('/login', [LoginController::class, 'store']);
 
 
 // Route::get('/blog', [BlogController::class, 'index'])->name('blog');
-// Route::group(['/blog'], function($lang) {
-//     App::setLocale('en');
+Route::group(['/en'], function($lang) {
+    App::setLocale('en');
 
-    Route::get('/blog', [BlogController::class, 'index'])->name('blog');
-// });
+    Route::get('en/blog', [BlogController::class, 'index'])->name('blog');
+});
 
 // Route::group(['prefix'=>'{lang}'], (function ($lang) {
 //     App::setLocale($lang)

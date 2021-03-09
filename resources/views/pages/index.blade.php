@@ -154,7 +154,7 @@
       
     
     <a href="{{ route('services') }}" class="nav__link">
-    <div class="services-center container">
+    <div class="services-center justify-center p-9">
       <div class="service" data-aos="fade-down" data-aos-duration="2000">
         <span><i class="fab fa-accusoft"></i></span>
         
