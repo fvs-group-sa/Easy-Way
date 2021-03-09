@@ -7,7 +7,7 @@ return [
     'blog' => 'المدونة',
     'about_us' => 'من نحن',
     'our_services' => 'خدماتنا',
-    'our_clients' => 'عملاؤنا',
+    'our_clients' => 'عملائنا',
     'contact_us' => 'اتصل بنا',
     'lets_chat_on_whatsapp' => 'تواصل معنا عبر الواتساب',
     'hero_title' => '’’الدرب السهل للنقل’’ الطريق السهل لمنتجاتك',

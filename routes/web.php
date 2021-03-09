@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Admin\PostsController;
@@ -18,6 +19,16 @@ use App\Http\Controllers\Admin\SettingsController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/', function ($lang) {
+    App::setLocale($lang);
+    return view('pages/index');
+})->name('home');
+
+
+Route::get('/', function () {
+    App::setlocale('ar');
+    return view('pages/index');
+})->name('home');
 
 Route::get('/', function () {
     return view('pages/index');
@@ -55,4 +66,14 @@ Route::post('/login', [LoginController::class, 'store']);
 // Route::post('/register', [RegisterController::class, 'store']);
 
 
-Route::get('/blog', [BlogController::class, 'index'])->name('blog');
+// Route::get('/blog', [BlogController::class, 'index'])->name('blog');
+// Route::group(['/blog'], function($lang) {
+//     App::setLocale('en');
+
+    Route::get('/blog', [BlogController::class, 'index'])->name('blog');
+// });
+
+// Route::group(['prefix'=>'{lang}'], (function ($lang) {
+//     App::setLocale($lang)
+
+// });

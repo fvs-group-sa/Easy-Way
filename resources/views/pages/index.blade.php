@@ -11,7 +11,7 @@
 
         <title>{{ __('dectionary.easyway') }}</title>
     </head>
-    <body>
+    <body class="verflow-x-hidden">
         <!--===== HEADER =====-->
         <header class="l-header">
             <nav class="nav bd-grid">
@@ -31,6 +31,12 @@
                         <li class="nav__item"><a href="{{route('blog')}}" class="nav__link">{{ __('dectionary.blog') }}</a></li>
                         <li class="nav__item"><a href="#contact" class="nav__link">{{ __('dectionary.contact_us') }}</a></li>
                     </ul>
+                </div>
+
+                <div>
+                    <a href="/en" class="">EN</a>
+                    /
+                    <a href="/" class="">AR</a>
                 </div>
                
                 <div class="nav__toggle" id="nav-toggle">
