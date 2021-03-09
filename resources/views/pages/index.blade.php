@@ -9,7 +9,7 @@
         <!-- =====BOX ICONS===== -->
         <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
 
-        <title>{{ __('dictionary.easyway') }}</title>
+        <title>{{ __('dectionary.easyway') }}</title>
     </head>
     <body>
         <!--===== HEADER =====-->
@@ -24,12 +24,12 @@
         
                 <div class="nav__menu" id="nav-menu">
                     <ul class="nav__list">
-                        <li class="nav__item"><a href="{{ route('home') }}" class="nav__link active">{{ __('dictionary.home') }}</a></li>
-                        <li class="nav__item"><a href="#about" class="nav__link">{{ __('dictionary.about_us') }}</a></li>
-                        <li class="nav__item"><a href="#services" class="nav__link">{{ __('dictionary.our_services') }}</a></li>
-                        <li class="nav__item"><a href="#ourclients" class="nav__link">{{ __('dictionary.our_clients') }}</a></li>
-                        <li class="nav__item"><a href="{{route('blog')}}" class="nav__link">{{ __('dictionary.blog') }}</a></li>
-                        <li class="nav__item"><a href="#contact" class="nav__link">{{ __('dictionary.contact_us') }}</a></li>
+                        <li class="nav__item"><a href="{{ route('home') }}" class="nav__link active">{{ __('dectionary.home') }}</a></li>
+                        <li class="nav__item"><a href="#about" class="nav__link">{{ __('dectionary.about_us') }}</a></li>
+                        <li class="nav__item"><a href="#services" class="nav__link">{{ __('dectionary.our_services') }}</a></li>
+                        <li class="nav__item"><a href="#ourclients" class="nav__link">{{ __('dectionary.our_clients') }}</a></li>
+                        <li class="nav__item"><a href="{{route('blog')}}" class="nav__link">{{ __('dectionary.blog') }}</a></li>
+                        <li class="nav__item"><a href="#contact" class="nav__link">{{ __('dectionary.contact_us') }}</a></li>
                     </ul>
                 </div>
                
@@ -45,9 +45,9 @@
            <!--===== HOME =====-->
             <section class="home bd-grid" id="home">
                 <div class="home__data">
-                    <h1 class="home__title">{{ __('dictionary.easyway') }} <span class="home__title-color">{{ __('dictionary.transport') }}</span><br>’’{{ __('dictionary.easyway_your_product') }}’’</h1>
+                    <h1 class="home__title">{{ __('dectionary.easyway') }} <span class="home__title-color">{{ __('dectionary.transport') }}</span><br>’’{{ __('dectionary.easyway_your_product') }}’’</h1>
 
-                    <a href="https://wa.me/601169766925" class="button">{{ __('dictionary.lets_chat_on_whatsapp') }}</a>
+                    <a href="https://wa.me/601169766925" class="button">{{ __('dectionary.lets_chat_on_whatsapp') }}</a>
                     
                 </div>
 
@@ -60,7 +60,7 @@
  
          <!--===== ABOUT =====-->
             <section class="about section " id="about">
-                <h2 class="section-title">{{ __('dictionary.about_us') }}</h2>
+                <h2 class="section-title">{{ __('dectionary.about_us') }}</h2>
 
                 <div class="about__container bd-grid">
                     <div class="about__img">
@@ -80,13 +80,13 @@
 
 
             <section class="about section " id="about">
-                <h2 class="section-title">{{ __('dictionary.why_easyway') }}</h2>
+                <h2 class="section-title">{{ __('dectionary.why_easyway') }}</h2>
             
                 <div class="about__container bd-grid">
                     
                     
                     <div>
-                        <h2 class="about__subtitle">{{ __('dictionary.our_mission') }}</h2>
+                        <h2 class="about__subtitle">{{ __('dectionary.our_mission') }}</h2>
                         <p>
                             BUSINESS, COMMERCE, TRADE, INDUSTRY, TRAFFIC mean activity concerned with the supplying and distribution of commodities. 
                             BUSINESS may be an inclusive term but specifically designates the activities of those engaged in the purchase or sale of commodities or 
@@ -96,7 +96,7 @@
                     </div> 
                     
                     <div>
-                        <h2 class="about__subtitle">{{ __('dictionary.our_vision') }}</h2>
+                        <h2 class="about__subtitle">{{ __('dectionary.our_vision') }}</h2>
                         <p>
                             BUSINESS, COMMERCE, TRADE, INDUSTRY, TRAFFIC mean activity concerned with the supplying and distribution of commodities. 
                             BUSINESS may be an inclusive term but specifically designates the activities of those engaged in the purchase or sale of commodities or 
@@ -135,7 +135,7 @@
  
 <!--===== services =====-->
             <section class="services section" id="services">
-            <h2 class="section-title">{{ __('dictionary.our_services') }}</h2>
+            <h2 class="section-title">{{ __('dectionary.our_services') }}</h2>
             <div class="services__container bd-grid">          
             <div>
             <h2 class="services__subtitle">Profesional Skills</h2>
@@ -204,7 +204,7 @@
   
              <!--===== Our Clients =====-->
             <section class="ourclients section" id="ourclients">
-                <h2 class="section-title">{{ __('dictionary.our_clients') }}</h2>
+                <h2 class="section-title">{{ __('dectionary.our_clients') }}</h2>
             <div class="clientsimage">
 
                 <img class="cn" src="{{ url('image/c1.png') }}" alt="Trulli" width="300" height="200">
@@ -226,7 +226,7 @@
 
             <!--===== CONTACT =====-->
             <section class="contact section" id="contact">
-                <h2 class="section-title">{{ __('dictionary.contact_us') }}</h2>
+                <h2 class="section-title">{{ __('dectionary.contact_us') }}</h2>
 
                 <div class="contact__container bd-grid">
                     <form action="" class="contact__form">
@@ -234,7 +234,7 @@
                         <input type="mail" placeholder="Email" class="contact__input">
                         <input type="phone" placeholder="Phone" class="contact__input">
                         <textarea name="" id="" cols="0" rows="10" class="contact__input"></textarea>
-                        <input type="button" value="{{ __('dictionary.send') }}" class="contact__button button">
+                        <input type="button" value="{{ __('dectionary.send') }}" class="contact__button button">
                     </form>
                 </div>
             </section>
