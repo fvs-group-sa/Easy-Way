@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-    <title>{{ __('arabic.easyway_dashboard') }}</title>
+    <title>{{ __('dectionary.easyway_dashboard') }}</title>
 </head>
     <body class="p-0">
         <div dir="rtl">
@@ -18,18 +18,18 @@
                 <div :class="sidebarOpen ? 'translate-x-0 ease-out' : '-translate-x-full ease-in'" class="fixed z-30 inset-y-0 left-0 w-60 transition duration-300 transform bg-white dark:bg-gray-900 overflow-y-auto lg:translate-x-0 lg:static lg:inset-0">
                   <div class="flex items-center justify-center mt-8">
                     <a href="{{route('home')}}" class="flex items-center">
-                        <span class="text-gray-800 dark:text-white text-2xl font-semibold">{{ __('arabic.easyway') }}</span>
+                        <span class="text-gray-800 dark:text-white text-2xl font-semibold">{{ __('dectionary.easyway') }}</span>
                     </a>
                   </div>
             
                   <nav class="flex flex-col mt-10 px-4 text-center">
-                      <a href="{{route('admin')}}" class="py-2 text-sm text-gray-700 dark:text-gray-100 bg-gray-200 dark:bg-gray-800 rounded">{{ __('arabic.blog') }}</a>
-                      <a href="{{route('settings')}}" class="mt-3 py-2 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-100 hover:bg-gray-200 dark:hover:bg-gray-800 rounded">{{ __('arabic.settings') }}</a>
+                      <a href="{{route('admin')}}" class="py-2 text-sm text-gray-700 dark:text-gray-100 bg-gray-200 dark:bg-gray-800 rounded">{{ __('dectionary.blog') }}</a>
+                      <a href="{{route('settings')}}" class="mt-3 py-2 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-100 hover:bg-gray-200 dark:hover:bg-gray-800 rounded">{{ __('dectionary.settings') }}</a>
                       
                       
                       <form action="{{ route('logout') }}" method="post" class="mt-3 py-2 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-100 hover:bg-gray-200 dark:hover:bg-gray-800 rounded">
                         @csrf
-                        <button type="submit" class="">{{ __('arabic.logout') }}</button>
+                        <button type="submit" class="">{{ __('dectionary.logout') }}</button>
                       </form>
                     </nav>
                 </div>
