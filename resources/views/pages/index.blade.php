@@ -19,7 +19,7 @@
                 <div class="logo">
                     <!-- <h1>EasyWay<span>Transport</span></h1> -->
                     <a href="{{ route('home') }}">
-                    <img src="{{ url('image/websitelogo1.png') }}" alt="">
+                    <img class="brand" src="{{ url('image/websitelogo1.png') }}" alt="">
                    </div>
         
                 <div class="nav__menu" id="nav-menu">
@@ -211,17 +211,17 @@
                 <h2 class="section-title">{{ __('dectionary.our_clients') }}</h2>
             <div class="clientsimage">
 
-                <img class="cn" src="{{ url('image/c1.png') }}" alt="Trulli" width="300" height="200">
-                <img class="cn" src="i{{ url('image/c2.png') }}" alt="Trulli" width="300" height="200">
-                <img class="cn" src="{{ url('image/c3.png') }}" alt="Trulli" width="300" height="200">
-                <img class="cn" src="{{ url('image/c4.png') }}" alt="Trulli" width="300" height="200">
-                <img class="cn" src="{{ url('image/c5.png') }}" alt="Trulli" width="300" height="200">
-                <img class="cn" src="{{ url('image/c6.png') }}" alt="Trulli" width="300" height="200">
-                <img class="cn" src="{{ url('image/c7.png') }}" alt="Trulli" width="300" height="200">
-                <img class="cn" src="{{ url('image/c8.png') }}" alt="Trulli" width="300" height="200">
-                <img class="cn" src="{{ url('image/c9.png') }}" alt="Trulli" width="300" height="200">
-                <img class="cn" src="{{ url('image/c10.png') }}" alt="Trulli" width="300" height="200">
-                <img class="cn" src="{{ url('image/c11.png') }}" alt="Trulli" width="300" height="200">
+                <img class="cn" src="{{ url('image/alyosra.png') }}" alt="Trulli" width="300" height="200">
+                <img class="cn" src="{{ url('image/arla.png') }}" alt="Trulli" width="300" height="200">
+                <img class="cn" src="{{ url('image/coffee.png') }}" alt="Trulli" width="300" height="200">
+                <img class="cn" src="{{ url('image/dawajen.png') }}" alt="Trulli" width="300" height="200">
+                <img class="cn" src="{{ url('image/etaa.png') }}" alt="Trulli" width="300" height="200">
+                <img class="cn" src="{{ url('image/forsan.png') }}" alt="Trulli" width="300" height="200">
+                <img class="cn" src="{{ url('image/nsk.png') }}" alt="Trulli" width="300" height="200">
+                <img class="cn" src="{{ url('image/pilatos.png') }}" alt="Trulli" width="300" height="200">
+                <img class="cn" src="{{ url('image/pomegranate.png') }}" alt="Trulli" width="300" height="200">
+                <img class="cn" src="{{ url('image/suwidi.png') }}" alt="Trulli" width="300" height="200">
+                <img class="cn" src="{{ url('image/uw.png') }}" alt="Trulli" width="300" height="200">
                 
                 </div>
 
