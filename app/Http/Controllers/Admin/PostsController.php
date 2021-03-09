@@ -63,9 +63,20 @@ class PostsController extends Controller
 
     public function update(Request $request, $post)
     {
+        $file = $request->file("select_file");
+
+        if($request->hasfile("select_file"))
+        {
+            $destination_path = 'image';
+            $image = $request->file('image');
+            $imageName = time().'.'.$request->image->extension();
+            $path = $request->file('image')->move($destination_path, $imageName);
+            
+            
+        }
+
         $post = post::find($post);
         $post->title = $request->title;
-        $post->image = $request->image;
         $post->body = $request->body;
         $post->save();
 

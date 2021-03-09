@@ -18,7 +18,7 @@
                       <div class="w-full lg:w-1/2   md:px-4 lg:px-6 py-5">
                         <div class="bg-white hover:shadow-xl">  
                           <div class="">
-                              <img src="{{asset('image/'.$post->image)}}" alt="" class="w-full border-white border-8">
+                              <img src="{{asset('image/'.$post->image)}}" alt="" class="w-full border-white border-8" style="height:500px;">
                           </div>
                           
                           <div class="px-4 py-4 md:px-10">
@@ -35,13 +35,13 @@
                                 </div>
     
                                 <div class="2/3">
-                                    <div class="text-sm font-medium">
-                                        <a href="{{route('editpost', $post)}}" class="text-blue-700 px-1 ">تعديل</a>
+                                    <div class="flex text-sm font-medium">
+                                        <a href="{{route('editpost', $post)}}" class="border border-indigo-500 bg-indigo-500 text-white rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-indigo-600 focus:outline-none focus:shadow-outline">تعديل</a>
 
                                         <form action="{{route('post.destroy', $post)}}" class="mr-1" method="post">
                                           @csrf
                                           @method('DELETE')
-                                          <button type="submit" class="text-blue-500 px-1">مسح</button>
+                                          <button type="submit" class="border border-red-500 bg-red-500 text-white rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-red-600 focus:outline-none focus:shadow-outline">مسح</button>
                                         </form>
                                     </div>
                                 </div>

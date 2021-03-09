@@ -24,8 +24,8 @@
         
                 <div class="nav__menu" id="nav-menu">
                     <ul class="nav__list">
-                        <li class="nav__item"><a href="{{ route('home') }}" class="nav__link active">Home</a></li>
-                        <li class="nav__item"><a href="{{route('blog')}}" class="nav__link">Blogs</a></li>
+                        <li class="nav__item"><a href="{{ route('home') }}" class="nav__link active">{{ __('dictionary.home') }}</a></li>
+                        <li class="nav__item"><a href="{{route('blog')}}" class="nav__link">{{ __('dictionary.blog') }}</a></li>
                     </ul>
                 </div>
                
