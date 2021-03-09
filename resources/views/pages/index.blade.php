@@ -19,7 +19,7 @@
                 <div class="logo">
                     <!-- <h1>EasyWay<span>Transport</span></h1> -->
                     <a href="{{ route('home') }}">
-                    <img src="{{ url('image/easy2-removebg-preview.png') }}" alt="">
+                    <img src="{{ url('image/websitelogo1.png') }}" alt="">
                    </div>
         
                 <div class="nav__menu" id="nav-menu">
@@ -51,12 +51,10 @@
                     
                 </div>
 
-              <div class="home__img">    
-                    <img src="{{ url('image/trackremovebg-preview.png') }}" alt="">
+                <div class="home__img">    
+                    <img src="{{ url('image/heroimage.png') }}" alt="">
                 </div>
-               </section>
-               
-        </section>
+            </section>
  
          <!--===== ABOUT =====-->
             <section class="about section " id="about">
