@@ -258,6 +258,12 @@ img {
 }
 
 /*===== HOME/easyway up =====*/
+.brand{
+width:75px;
+
+}
+
+
 .home {
     height: 0vh;
     row-gap: 1rem;
