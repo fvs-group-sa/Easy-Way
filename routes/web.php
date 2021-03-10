@@ -27,6 +27,12 @@ Route::group(['/en'], function($lang) {
     })->name('home');
 
 
+    Route::get('/', function () {
+        App::setLocale('ar');
+        return view('pages/index');
+    })->name('home');
+
+
     Route::get('en/services', function () {
         return view('pages/services');
     })->name('services');
