@@ -61,7 +61,7 @@
                 <div class="logo">
                     <!-- <h1>EasyWay<span>Transport</span></h1> -->
                     <a href="index.html">
-                    <img src="{{ url('image/easy2-removebg-preview.png') }}" alt="">
+                    <img class="brand" src="{{ url('image/websitelogo1.png') }}" alt="">
                     
                    </div>
         
