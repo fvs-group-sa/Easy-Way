@@ -72,3 +72,6 @@ Route::get('set-locale/{locale}', function ($locale) {
     session()->put('locale', $locale);
     return redirect()->back();
 })->name('locale.setting');
+
+
+// test
