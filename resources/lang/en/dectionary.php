@@ -55,5 +55,18 @@ return [
      'our_services4' => 'Portable Transport',
 
 
+     'our_services_page' => ' Benefits guaranteed for your Business',
+     
+     
+     'our_services_page_discrebtion' => 'Safe & Fast Transportation to maintain the quality of your products.
+     Effective cooling temperature control where you can choose the right temperature for your products.
+     Ensure the Quality of the Service provided by Shipment tracking from on loading area up to unloading area.
+     Instant and Effective response by Operation Team and Customer Service 24/7 to guarantee the Quality of the Service.
+     Providing Transportation Accessories such as Hydraulic Jack and others to be unique in your Customer Service.
+     Transport Vehicles of Various Models and Sizes in competitive Prices to meet your needs.
+     Provide Transport consultations to Determine the most suitable for you and your Customer.
+     Flexible Transportation Contracts as desired (Daily - Monthly - Annually) to achieve your Targets.
+     Cargo Insurance, immediate compensation for your Business in case of Damage or Theft',
+
 
     ];
