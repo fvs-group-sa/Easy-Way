@@ -11,8 +11,8 @@
                 </div>
                 
                 <div>
-                    <h2 class="about__subtitle">{{ __('dectionary.our_services_page') }}</h2>
-                    <p class="about__text">{{ __('dectionary.our_services_page_discrebtion') }}</p>           
+                    <h2 class="about__subtitle text-center">{{ __('dectionary.our_services_page') }}</h2>
+                    <p class="about__text text-justify">{{ __('dectionary.our_services_page_discrebtion') }}</p>           
                 </div>    
                 
                  </div>

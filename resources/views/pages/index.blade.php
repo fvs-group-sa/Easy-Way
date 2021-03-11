@@ -73,7 +73,7 @@
                     
                     <div>
                         <h2 class="about__subtitle"></h2>
-                        <p class="about__text">{{ __('dectionary.about_us_discrebtion')}}</p>           
+                        <p class="about__text text-justify">{{ __('dectionary.about_us_discrebtion')}}</p>           
                     </div>                                   
                 </div>
            
@@ -81,26 +81,29 @@
 
 
             <section class="about section " id="about">
-                <h2 class="section-title">{{ __('dectionary.why_easyway') }}</h2>
-            <p>{{ __('dectionary.why_easyway_discrebtion') }}</p>
-                <div class="about__container bd-grid">
+                <div class="text-center mb-4">
+                    <h2 class="section-title ">{{ __('dectionary.why_easyway') }}</h2>
+                
+                    <p>{{ __('dectionary.why_easyway_discrebtion') }}</p>
                     
-                    
-                    <div>
-                        <h2 class="about__subtitle">{{ __('dectionary.our_message') }}</h2>
-                        <p>
-                        {{ __('dectionary.our_message_discrebrtion') }}
-                          </p>           
-                    </div> 
-                    
-                    <div>
-                        <h2 class="about__subtitle">{{ __('dectionary.our_vision') }}</h2>
-                        <p>
+                </div>
+            
+                <div class="about__container text-center">
+                    <div class="text-center">   
+                        <h2 class="about__subtitle ">{{ __('dectionary.our_message') }}</h2>
+                        <p>{{ __('dectionary.our_message_discrebrtion') }}</p> 
+      
+                    </div>
+                
+
+                <div class="text-center mt-4">   
+                    <h2 class="about__subtitle">{{ __('dectionary.our_vision') }}</h2>
+                  
+                    <p>
                         {{ __('dectionary.our_vision_discrebrtion') }}
-                          </p>           
-                    </div> 
-                    
-                   
+                    </p> 
+         
+                </div> 
                 </div>
             </section>
 
@@ -110,17 +113,17 @@
 <div class="slideshow-container">
     <div class="mySlides fade">
       <div class="numbertext"></div>
-      <img src="{{ url('image/img/شاحنة.jpg') }}" style="width:100%">
+      <img src="{{ url('image/heroimage.png') }}" style="width:100%">
       
     </div>
     <div class="mySlides fade">
       <div class="numbertext"></div>
-      <img src="{{ url('image/about_easy-removebg-preview.png') }}" style="width:100%">
+      <img src="{{ url('image/services.png') }}" style="width:100%">
     
     </div>
     <div class="mySlides fade">
       <div class="numbertext"></div>
-      <img src="{{ url('image/easyservices-removebg-preview.png') }}" style="width:100%">
+      <img src="{{ url('image/truckhompage2.png') }}" style="width:100%">
       
     </div>
     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
