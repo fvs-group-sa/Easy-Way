@@ -32,6 +32,14 @@
                         <button type="submit" class="">{{ __('dectionary.logout') }}</button>
                       </form>
                     </nav>
+
+                    
+                    <div class="flex mt-10 text-center justify-center">
+                      <a href="{{ route('locale.setting', 'en') }}" class="p-2">EN</a>
+                      <span class="p-2">/</span>
+                      <a href="{{ route('locale.setting', 'ar') }}" class="p-2">AR</a>
+                    </div>
+                  
                 </div>
             
                 <div class="flex-1 flex flex-col overflow-hidden">
