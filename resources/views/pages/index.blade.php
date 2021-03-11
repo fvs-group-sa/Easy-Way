@@ -73,13 +73,7 @@
                     
                     <div>
                         <h2 class="about__subtitle"></h2>
-                        <p class="about__text">We at Easyway believe that the Customer is the greatest Asset of the Company since Establishment by an ambitious and promising
-                             Saudi Administration that aspires continuous Development which fit the needs of refrigerated and dry transport services customers. 
-                             Therefore, we adhere Services Improvements based on the Opinions, Suggestions and Feedback of our customers and create Opportunities 
-                             among difficulties for them. As a result, we gained great Reputation and Impressions in our Customers particularly as well as in Transport 
-                             Industry Generally. However, we haven't stopped at this Point. We have become one of the most Important Destinations in Saudi Arabia for 
-                             Refrigerated and dry Transport Services in terms of Experience and Excellence by exploiting all our Resources and expertise to achieve success 
-                             for your Business and meet your desires and aspirations of your Customers to serve them better always.</p>           
+                        <p class="about__text">{{ __('dectionary.about_us_discrebtion')}}</p>           
                     </div>                                   
                 </div>
            
@@ -88,26 +82,21 @@
 
             <section class="about section " id="about">
                 <h2 class="section-title">{{ __('dectionary.why_easyway') }}</h2>
-            
+            <p>{{ __('dectionary.why_easyway_discrebtion') }}</p>
                 <div class="about__container bd-grid">
                     
                     
                     <div>
-                        <h2 class="about__subtitle">{{ __('dectionary.our_mission') }}</h2>
+                        <h2 class="about__subtitle">{{ __('dectionary.our_message') }}</h2>
                         <p>
-                        Our mission is to be the first destination for refrigerated and dry transport services in Saudi Arabia by creating a milestone in development
-                         and excellence at ever growing and competitive refrigerated and dry transport industry. For delivering quality, service and speed by utilizing 
-                         the best experiences and resources to exploit them to meet the needs and aspirations of our customers to serve them better always.
+                        {{ __('dectionary.our_message_discrebrtion') }}
                           </p>           
                     </div> 
                     
                     <div>
                         <h2 class="about__subtitle">{{ __('dectionary.our_vision') }}</h2>
                         <p>
-                            BUSINESS, COMMERCE, TRADE, INDUSTRY, TRAFFIC mean activity concerned with the supplying and distribution of commodities. 
-                            BUSINESS may be an inclusive term but specifically designates the activities of those engaged in the purchase or sale of commodities or 
-                            in related financial transactions. COMMERCE and TRADE imply the exchange and transportation of commodities. INDUSTRY applies 
-                            to the producing of commodities, especially by manufacturing or processing, usually on a large scale.
+                        {{ __('dectionary.our_vision_discrebrtion') }}
                           </p>           
                     </div> 
                     
@@ -144,8 +133,8 @@
             <h2 class="section-title">{{ __('dectionary.our_services') }}</h2>
             <div class="services__container bd-grid">          
             <div>
-            <h2 class="services__subtitle">Profesional Skills</h2>
-            <p class="services__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit optio id vero amet, alias architecto consectetur error eum eaque sit.</p>
+            <h2 class="services__subtitle">{{ __('dectionary.our_services_discrebtion') }}</h2>
+            
             </section>
             </div>
             </div>
@@ -160,7 +149,7 @@
       <div class="service" data-aos="fade-down" data-aos-duration="2000">
         <span><i class="fab fa-accusoft"></i></span>
         
-        <h2>Delivery</h2>
+        <h2>{{ __('dectionary.our_services1') }}</h2>
         
         <img src="{{ url('image/rsz_2شاحنة-removebg-preview.png') }}" alt="Paris" width="300" height="300">
       </div>
@@ -172,7 +161,7 @@
       <a href="{{ route('services') }}" class="nav__link">
       <div class="service" data-aos="fade-up" data-aos-duration="2000">
         <span><i class="fas fa-chart-line"></i></span>
-        <h2>Delivery</h2>
+        <h2>{{ __('dectionary.our_services2') }}</h2>
        
         <img src="{{ url('image/rsz_2شاحنة-removebg-preview.png') }}" alt="Paris" width="300" height="300">
        
@@ -183,7 +172,8 @@
       <a href="{{ route('services') }}" class="nav__link"> 
       <div class="service" data-aos="fade-down" data-aos-duration="2000">
         <span><i class="fas fa-blender-phone"></i></span>
-        <h2>Delivery</h2>
+
+        <h2>{{ __('dectionary.our_services3') }}</h2>
      
         <img src="{{ url('image/rsz_2شاحنة-removebg-preview.png') }}" alt="Paris" width="300" height="300">
        
@@ -194,7 +184,8 @@
       <a href="{{ route('services') }}" class="nav__link">
       <div class="service" data-aos="fade-down" data-aos-duration="2000">
         <span><i class="fas fa-blender-phone"></i></span>
-        <h2>Delivery</h2>
+        
+        <h2>{{ __('dectionary.our_services4') }}</h2>
       
         <img src="{{ url('image/rsz_2شاحنة-removebg-preview.png') }}" alt="Paris" width="300" height="300">
        
