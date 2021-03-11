@@ -46,10 +46,7 @@ use App\Http\Controllers\Admin\SettingsController;
     Route::get('/editpost/{post}', [PostsController::class, 'editPost'])->name('editpost')->middleware('auth');
     Route::post('/updatepost/{post}', [PostsController::class, 'update'])->name('updatepost')->middleware('auth');
     Route::delete('/post/{post}', [PostsController::class, 'destroy'])->name('post.destroy')->middleware('auth');
-
-    Route::get('/admin', [PostsController::class, 'index'])
-        ->name('admin')
-        ->middleware('auth');
+    Route::get('/admin', [PostsController::class, 'index'])->name('admin')->middleware('auth');
 
     Route::get('/settings', [SettingsController::class, 'index'])
         ->name('settings')
@@ -65,6 +62,7 @@ use App\Http\Controllers\Admin\SettingsController;
 
 
     Route::get('/blog', [BlogController::class, 'index'])->name('blog');
+    Route::get('/blog/{blog}', [BlogController::class, 'show'])->name('showblog');
 // });
 
 Route::get('set-locale/{locale}', function ($locale) {

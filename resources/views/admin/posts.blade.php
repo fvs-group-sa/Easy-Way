@@ -26,7 +26,7 @@
                                 {{$post->title}}
                             </h1>
                             <p class="py-4">
-                              {{$post->body}}
+                              {{Str::limit($post->body, 230)}}
                             </p>
                             
                             <div class="flex flex-wrap pt-8">

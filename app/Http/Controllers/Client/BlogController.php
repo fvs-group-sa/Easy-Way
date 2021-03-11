@@ -16,4 +16,15 @@ class BlogController extends Controller
             'blogs'=>$blog
         ]);
     }
+
+
+    public function show(Post $blog)
+    {
+        $blog = post::find($blog);
+        return view('pages.showblog',[
+            'blogs'=>$blog
+        ]);
+    // dd($blog);
+
+    }
 }

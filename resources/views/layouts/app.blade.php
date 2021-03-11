@@ -24,9 +24,15 @@
         
                 <div class="nav__menu" id="nav-menu">
                     <ul class="nav__list">
-                        <li class="nav__item"><a href="{{ route('home') }}" class="nav__link active">{{ __('dectionary.home') }}</a></li>
-                        <li class="nav__item"><a href="{{route('blog')}}" class="nav__link">{{ __('dectionary.blog') }}</a></li>
+                        <li class="nav__item"><a href="{{ route('home') }}" class="nav__link">{{ __('dectionary.home') }}</a></li>
+                        <li class="nav__item"><a href="{{route('blog')}}" class="nav__link active">{{ __('dectionary.blog') }}</a></li>
                     </ul>
+                </div>
+               
+                <div>
+                    <a href="{{ route('locale.setting', 'en') }}" class="">EN</a>
+                    /
+                    <a href="{{ route('locale.setting', 'ar') }}" class="">AR</a>
                 </div>
                
                 <div class="nav__toggle" id="nav-toggle">
