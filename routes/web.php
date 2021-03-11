@@ -18,22 +18,21 @@ use App\Http\Controllers\Admin\SettingsController;
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
 |
-*/
-Route::group(['/en'], function($lang) {
-    App::setLocale('en');
+// */
+// Route::group(['prefix' => 'en'], function () {
+//     App::setLocale('en');
 
-    Route::get('/en', function () {
-        return view('pages/index');
-    })->name('home');
 
 
     Route::get('/', function () {
-        App::setLocale('ar');
         return view('pages/index');
     })->name('home');
 
 
-    Route::get('en/services', function () {
+  
+
+
+    Route::get('/services', function () {
         return view('pages/services');
     })->name('services');
 
@@ -65,5 +64,11 @@ Route::group(['/en'], function($lang) {
     // Route::post('/register', [RegisterController::class, 'store']);
 
 
-    Route::get('en/blog', [BlogController::class, 'index'])->name('blog');
-});
+    Route::get('/blog', [BlogController::class, 'index'])->name('blog');
+// });
+
+Route::get('set-locale/{locale}', function ($locale) {
+    App::setLocale($locale);
+    session()->put('locale', $locale);
+    return redirect()->back();
+})->name('locale.setting');
