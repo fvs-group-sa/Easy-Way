@@ -34,9 +34,9 @@
                 </div>
 
                 <div>
-                    <a href="/en" class="">EN</a>
+                    <a href="{{ route('locale.setting', 'en') }}" class="">EN</a>
                     /
-                    <a href="/" class="">AR</a>
+                    <a href="{{ route('locale.setting', 'ar') }}" class="">AR</a>
                 </div>
                
                 <div class="nav__toggle" id="nav-toggle">
